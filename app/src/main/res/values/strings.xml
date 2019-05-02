@@ -1,6 +1,18 @@
 <resources>
     <string name="app_name">weeklybook</string>
+
+    <!-- handful of book -->
+
+    <!-- Home -->
     <string name="title_home">Home</string>
-    <string name="title_dashboard">Dashboard</string>
+
+    <!-- Recommendation -->
+    <string name="title_recommendation">REC</string>
+
+    <!-- Favorites -->
+    <string name="title_favorite">Favorite</string>
+
+
     <string name="title_notifications">Notifications</string>
+
 </resources>
