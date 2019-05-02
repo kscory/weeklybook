@@ -2,6 +2,8 @@ package com.kscory.weeklybook.di
 
 import android.app.Application
 import com.kscory.weeklybook.BookApplication
+import com.kscory.weeklybook.di.data.DataModule
+import com.kscory.weeklybook.di.domain.DomainModule
 import com.kscory.weeklybook.di.presentation.main.MainActivityBuilder
 import dagger.BindsInstance
 import dagger.Component
@@ -13,6 +15,8 @@ import javax.inject.Singleton
 @Component(modules = [
     AndroidInjectionModule::class,
     AppModule::class,
+    DomainModule::class,
+    DataModule::class,
     MainActivityBuilder::class
 ])
 interface AppComponent : AppDependencies, AndroidInjector<BookApplication> {
