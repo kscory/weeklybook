@@ -1,6 +1,6 @@
 package com.kscory.weeklybook.domain.baseUseCase
 
-import com.kscory.weeklybook.utils.rx.SchedulerProvider
+import com.kscory.weeklybook.presentation.common.rx.SchedulerProvider
 import io.reactivex.Observable
 
 abstract class UseCaseObservable<Type, in Params>(private val schedulerProvider: SchedulerProvider) {

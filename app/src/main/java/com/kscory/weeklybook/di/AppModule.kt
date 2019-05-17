@@ -4,8 +4,8 @@ import android.app.Application
 import android.content.Context
 import com.kscory.weeklybook.presentation.common.resource.ResourceProvider
 import com.kscory.weeklybook.presentation.common.resource.ResourceProviderImpl
-import com.kscory.weeklybook.utils.rx.AppSchedulerProvider
-import com.kscory.weeklybook.utils.rx.SchedulerProvider
+import com.kscory.weeklybook.presentation.common.rx.AppSchedulerProvider
+import com.kscory.weeklybook.presentation.common.rx.SchedulerProvider
 import dagger.Module
 import dagger.Provides
 import javax.inject.Named
@@ -21,7 +21,8 @@ class AppModule {
 
     @Provides
     @Singleton
-    fun provideSchedulerProvider(): SchedulerProvider = AppSchedulerProvider()
+    fun provideSchedulerProvider(): SchedulerProvider =
+        AppSchedulerProvider()
 
     @Provides
     @Singleton

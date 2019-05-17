@@ -27,6 +27,7 @@
                     android:id="@+id/tv_title"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:text="@{viewModel.title}"
                     android:textAlignment="center"
                     android:textColor="@color/colorTitle"
                     android:textSize="@dimen/home_title_font_size"
@@ -41,6 +42,7 @@
                     android:id="@+id/tv_sub_title"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:text="@{viewModel.recommendation.subTitle}"
                     android:textAlignment="center"
                     android:textColor="@color/colorWriting"
                     android:textSize="@dimen/home_sub_title_font_size"
@@ -55,6 +57,7 @@
                     android:id="@+id/tv_content"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:text="@{viewModel.recommendation.content}"
                     android:textAlignment="center"
                     android:textColor="@color/colorWriting"
                     android:textSize="@dimen/home_content_font_size"
@@ -70,6 +73,7 @@
                     android:id="@+id/tv_finalization"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:text="@{viewModel.recommendation.finalization}"
                     android:textAlignment="center"
                     android:textColor="@color/colorWriting"
                     android:textSize="@dimen/home_content_font_size"
@@ -85,6 +89,7 @@
                     android:id="@+id/tv_author"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
+                    android:text="@{viewModel.recommendation.author}"
                     android:textAlignment="center"
                     android:textColor="@color/colorWriting"
                     android:textSize="@dimen/home_author_font_size"
@@ -101,78 +106,84 @@
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:background="@drawable/bg_image_border"
+                    android:layout_marginTop="@dimen/space_small"
+                    android:layout_marginStart="@dimen/home_content_padding"
+                    android:layout_marginEnd="@dimen/home_content_padding"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintTop_toBottomOf="@+id/tv_author"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginTop="@dimen/space_small"
-                    android:layout_marginStart="@dimen/home_content_padding"
-                    android:layout_marginEnd="@dimen/home_content_padding"/>
+                    app:imageFromUrl="@{viewModel.recommendation.cardFirstUrl}"/>
 
             <ImageView
                     android:id="@+id/iv_card_second"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:background="@drawable/bg_image_border"
+                    android:layout_marginTop="@dimen/space_small"
+                    android:layout_marginStart="@dimen/home_content_padding"
+                    android:layout_marginEnd="@dimen/home_content_padding"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintTop_toBottomOf="@+id/iv_card_first"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginTop="@dimen/space_small"
-                    android:layout_marginStart="@dimen/home_content_padding"
-                    android:layout_marginEnd="@dimen/home_content_padding"/>
+                    app:imageFromUrl="@{viewModel.recommendation.cardSecondUrl}"/>
 
             <ImageView
                     android:id="@+id/iv_card_third"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:background="@drawable/bg_image_border"
+                    android:layout_marginTop="@dimen/space_small"
+                    android:layout_marginStart="@dimen/home_content_padding"
+                    android:layout_marginEnd="@dimen/home_content_padding"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintTop_toBottomOf="@+id/iv_card_second"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginTop="@dimen/space_small"
-                    android:layout_marginStart="@dimen/home_content_padding"
-                    android:layout_marginEnd="@dimen/home_content_padding"/>
+                    app:imageFromUrl="@{viewModel.recommendation.cardThirdUrl}"/>
 
             <ImageView
                     android:id="@+id/iv_card_fourth"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:background="@drawable/bg_image_border"
+                    android:layout_marginTop="@dimen/space_small"
+                    android:layout_marginStart="@dimen/home_content_padding"
+                    android:layout_marginEnd="@dimen/home_content_padding"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintTop_toBottomOf="@+id/iv_card_third"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginTop="@dimen/space_small"
-                    android:layout_marginStart="@dimen/home_content_padding"
-                    android:layout_marginEnd="@dimen/home_content_padding"/>
+                    app:imageFromUrl="@{viewModel.recommendation.cardFourthUrl}"/>
 
             <ImageView
                     android:id="@+id/iv_card_fifth"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:background="@drawable/bg_image_border"
+                    android:layout_marginTop="@dimen/space_small"
+                    android:layout_marginStart="@dimen/home_content_padding"
+                    android:layout_marginEnd="@dimen/home_content_padding"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintTop_toBottomOf="@+id/iv_card_fourth"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginTop="@dimen/space_small"
-                    android:layout_marginStart="@dimen/home_content_padding"
-                    android:layout_marginEnd="@dimen/home_content_padding"/>
+                    app:imageFromUrl="@{viewModel.recommendation.cardFifthUrl}"/>
 
             <ImageView
                     android:id="@+id/iv_card_sixth"
                     android:layout_width="0dp"
                     android:layout_height="0dp"
                     android:background="@drawable/bg_image_border"
+                    android:layout_marginTop="@dimen/space_small"
+                    android:layout_marginStart="@dimen/home_content_padding"
+                    android:layout_marginEnd="@dimen/home_content_padding"
                     app:layout_constraintDimensionRatio="1:1"
                     app:layout_constraintTop_toBottomOf="@+id/iv_card_fifth"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:layout_marginTop="@dimen/space_small"
-                    android:layout_marginStart="@dimen/home_content_padding"
-                    android:layout_marginEnd="@dimen/home_content_padding"/>
+                    app:imageFromUrl="@{viewModel.recommendation.cardSixthUrl}"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

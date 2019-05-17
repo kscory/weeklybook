@@ -34,6 +34,7 @@ dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
+    implementation "androidx.legacy:legacy-support-v4:$androidx_version"
     implementation "androidx.appcompat:appcompat:$androidx_version"
     implementation "androidx.recyclerview:recyclerview:$androidx_version"
     implementation "androidx.cardview:cardview:$androidx_version"
@@ -42,14 +43,17 @@ dependencies {
     implementation "androidx.core:core-ktx:$kotlin_ktx_version"
     implementation "com.google.android.material:material:$google_material_version"
 
+
+
     // ViewModel & LiveData
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycle_version"
     implementation "androidx.lifecycle:lifecycle-common-java8:$lifecycle_version"
+    implementation "androidx.lifecycle:lifecycle-reactivestreams:$lifecycle_version"
+    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
 
     // Room
     implementation "androidx.room:room-runtime:$room_version"
     implementation "androidx.room:room-rxjava2:$room_version"
-    implementation 'androidx.legacy:legacy-support-v4:1.0.0-beta01'
     kapt "androidx.room:room-compiler:$room_version"
 
     // Paging

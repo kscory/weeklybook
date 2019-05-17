@@ -12,16 +12,16 @@ import dagger.Provides
 import dagger.android.ContributesAndroidInjector
 import javax.inject.Named
 
-@Module(includes = [MainActivityModule.Binders::class])
+@Module(includes = [
+    MainActivityModule.Binders::class
+])
 class MainActivityModule {
 
     @Module
     interface Binders {
-        @Binds
-        fun providesAppCompatActivity(mainActivity: MainActivity): AppCompatActivity
 
-        @ContributesAndroidInjector
-        fun contributeHomeFragment(): HomeFragment
+        @Binds
+        fun provideAppCompatActivity(mainActivity: MainActivity): AppCompatActivity
 
         @ContributesAndroidInjector
         fun contributeFavoriteFragment(): FavoriteFragment
@@ -33,5 +33,4 @@ class MainActivityModule {
 
     @Provides
     fun provideInflater(@Named("mainContext") context: Context) : LayoutInflater = LayoutInflater.from(context)
-
 }

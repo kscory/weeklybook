@@ -1,4 +1,4 @@
-package com.kscory.weeklybook.utils
+package com.kscory.weeklybook.utils.ext
 
 import java.util.regex.Pattern
 
