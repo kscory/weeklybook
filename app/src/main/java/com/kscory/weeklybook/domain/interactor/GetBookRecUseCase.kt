@@ -6,7 +6,7 @@ import com.kscory.weeklybook.model.Recommendation
 import com.kscory.weeklybook.presentation.common.rx.SchedulerProvider
 import io.reactivex.Single
 
-class getBookRecommendedUseCase(
+class GetBookRecUseCase(
     private val gateway: BookGateway,
     schedulerProvider: SchedulerProvider
 ): UseCaseSingle<Recommendation, Void>(schedulerProvider) {
