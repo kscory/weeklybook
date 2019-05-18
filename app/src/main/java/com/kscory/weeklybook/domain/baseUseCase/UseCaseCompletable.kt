@@ -9,5 +9,4 @@ abstract class UseCaseCompletable<in Params>(private val schedulerProvider: Sche
     fun execute(params: Params?): Completable =
         buildUseCaseCompletable(params)
             .subscribeOn(schedulerProvider.io())
-            .observeOn(schedulerProvider.ui())
 }

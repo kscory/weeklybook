@@ -9,5 +9,4 @@ abstract class UseCaseObservable<Type, in Params>(private val schedulerProvider:
     fun execute(params: Params? = null): Observable<Type> =
         buildUseCaseObservable(params)
             .subscribeOn(schedulerProvider.io())
-            .observeOn(schedulerProvider.ui())
 }

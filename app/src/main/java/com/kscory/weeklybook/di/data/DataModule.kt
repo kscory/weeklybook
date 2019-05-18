@@ -1,6 +1,6 @@
 package com.kscory.weeklybook.di.data
 
-import com.kscory.weeklybook.data.BookRepository
+import com.kscory.weeklybook.data.BookGatewayImpl
 import com.kscory.weeklybook.domain.gateway.BookGateway
 import dagger.Module
 import dagger.Provides
@@ -11,6 +11,6 @@ class DataModule {
 
     @Provides
     @Singleton
-    fun provideBookRepository(): BookGateway =
-            BookRepository()
+    fun provideBookGateway(): BookGateway =
+            BookGatewayImpl()
 }

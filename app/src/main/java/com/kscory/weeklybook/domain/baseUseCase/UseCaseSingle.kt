@@ -9,5 +9,4 @@ abstract class UseCaseSingle<Type, in Params>(private val schedulerProvider: Sch
     fun execute(params: Params? = null): Single<Type> =
         buildUseCaseSingle(params)
             .subscribeOn(schedulerProvider.io())
-            .observeOn(schedulerProvider.ui())
 }

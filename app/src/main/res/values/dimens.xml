@@ -11,6 +11,9 @@
     <dimen name="space_large">20dp</dimen>
     <dimen name="space_x_large">24dp</dimen>
 
+    <!--main-->
+    <dimen name="temp_title_line_spacing">4sp</dimen>
+
     <!-- home -->
     <dimen name="home_image_border_size">1dp</dimen>
     <dimen name="home_content_padding">15dp</dimen>
@@ -20,4 +23,8 @@
     <dimen name="home_sub_title_font_size">14sp</dimen>
     <dimen name="home_content_font_size">12sp</dimen>
     <dimen name="home_author_font_size">14sp</dimen>
+
+    <!-- Per the design guidelines, navigation drawers should be between 240dp and 320dp:
+         https://developer.android.com/design/patterns/navigation-drawer.html -->
+    <dimen name="navigation_drawer_width">240dp</dimen>
 </resources>

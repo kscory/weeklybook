@@ -23,6 +23,9 @@ class MainActivityModule {
         @Binds
         fun provideAppCompatActivity(mainActivity: MainActivity): AppCompatActivity
 
+        @ContributesAndroidInjector(modules = [HomeFragmentModule::class])
+        fun contributeHomeFragment(): HomeFragment
+
         @ContributesAndroidInjector
         fun contributeFavoriteFragment(): FavoriteFragment
     }

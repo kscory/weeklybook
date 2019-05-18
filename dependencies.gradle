@@ -13,13 +13,13 @@ ext {
 
     // Library
     androidx_version = '1.0.0'
-    constraint_layout_version = '2.0.0-alpha5'
+    constraint_layout_version = '2.0.0-beta1'
     google_material_version = '1.0.0'
-    kotlin_ktx_version = '1.1.0-alpha05'
+    kotlin_ktx_version = '1.2.0-alpha01'
 
     // Architecture Component
     lifecycle_version = '2.0.0'
-    room_version = "2.1.0-alpha07"
+    room_version = "2.1.0-beta01"
     paging_version = "2.1.0"
 
     // Google Library

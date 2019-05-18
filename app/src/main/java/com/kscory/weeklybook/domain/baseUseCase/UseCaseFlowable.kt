@@ -9,5 +9,4 @@ abstract class UseCaseFlowable<Type, in Params>(private val schedulerProvider: S
     fun excute(params: Params? = null): Flowable<Type> =
         buildUseCaseFlowable(params)
             .subscribeOn(schedulerProvider.io())
-            .observeOn(schedulerProvider.ui())
 }

@@ -9,5 +9,4 @@ abstract class UseCaseMaybe<Type, in Params>(private val schedulerProvider: Sche
     fun execute(params: Params? = null): Maybe<Type> =
         buildUseCaseMaybe(params)
             .subscribeOn(schedulerProvider.io())
-            .observeOn(schedulerProvider.ui())
 }

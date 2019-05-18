@@ -5,6 +5,7 @@
 
     <!-- Home -->
     <string name="title_home">Home</string>
+    <string name="title_home_toolbar">REC of this week</string>
 
     <!-- Recommendation -->
     <string name="title_recommendation">REC</string>
@@ -14,5 +15,15 @@
 
 
     <string name="title_notifications">Notifications</string>
+    <string name="title_activity_temp_drawer">TempDrawerActivity</string>
+    <string name="title_section1">Section 1</string>
+    <string name="title_section2">Section 2</string>
+    <string name="title_section3">Section 3</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+
+    <string name="action_settings">Settings</string>
 
 </resources>

@@ -1,7 +1,11 @@
 package com.kscory.weeklybook.presentation
 
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
+import androidx.databinding.DataBindingUtil
 import com.kscory.weeklybook.R
+import com.kscory.weeklybook.databinding.ActivityMainBinding
 import com.kscory.weeklybook.presentation.common.activity.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
@@ -11,11 +15,20 @@ class MainActivity : BaseActivity() {
     @Inject
     lateinit var navigationController: NavigationController
 
+    private val binding: ActivityMainBinding by lazy {
+        DataBindingUtil.setContentView<ActivityMainBinding>(
+            this,
+            R.layout.activity_main
+        )
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        setSupportActionBar(binding.toolbar)
 
         navigationController.navigateToHome()
+        setTitle(R.string.title_home_toolbar)
         setupBottomNavigation(savedInstanceState)
 
     }

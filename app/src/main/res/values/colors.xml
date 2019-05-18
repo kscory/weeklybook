@@ -7,7 +7,11 @@
     <color name="colorWriting">#808184</color>
     <color name="colorTitle">#707070</color>
 
+    <color name="colorWhite">#FFFFFF</color>
     <color name="colorBlackE">#EEEEEE</color>
+    <color name="colorBlackD">#dddddd</color>
+    <color name="colorLittleBlack">#999999</color>
+
     <color name="colorRed">#ff0000</color>
     <color name="colorBurgundy">#630404</color>
     <color name="colorPink">#ff99cc</color>
@@ -18,7 +22,10 @@
     <color name="colorGoldGreen">#a3b846</color>
     <color name="colorBlueOfSea">#3366ff</color>
     <color name="colorOrangeMuffler">#e06d1f</color>
-    <color name="colorBlackD">#dddddd</color>
-    <color name="colorLittleBlack">#999999</color>
     <color name="translucent">#77FFFFFF</color>
+
+    <color name="appBarTextColor">#FFFFFF</color>
+
+    <color name="drawerItemIconTint">#666666</color>
+    <color name="drawerItemTextColor">#222222</color>
 </resources>

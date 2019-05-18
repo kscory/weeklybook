@@ -1,6 +1,7 @@
 package com.kscory.weeklybook.model
 
 data class Recommendation(
+    val id: Int,
     val title: String,
     val subTitle: String,
     val content: String,
@@ -11,5 +12,6 @@ data class Recommendation(
     val cardThirdUrl: String,
     val cardFourthUrl: String,
     val cardFifthUrl: String,
-    val cardSixthUrl: String
+    val cardSixthUrl: String,
+    val isFavorite: Boolean
 )
