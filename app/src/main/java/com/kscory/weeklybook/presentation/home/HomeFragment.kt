@@ -1,21 +1,23 @@
 package com.kscory.weeklybook.presentation.home
 
 import android.os.Bundle
-import android.util.Log
 import android.view.*
-import androidx.databinding.DataBindingUtil
-import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.RecyclerView
 import com.kscory.weeklybook.R
 import com.kscory.weeklybook.databinding.FragmentHomeBinding
 import com.kscory.weeklybook.presentation.common.fragment.Findable
 import dagger.android.support.DaggerFragment
+import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Inject
 
 class HomeFragment : DaggerFragment(), Findable {
     override val tagForFinding: String
         get() = "home"
+
+    val viewDisposables = CompositeDisposable()
+
     private lateinit var binding: FragmentHomeBinding
     private lateinit var homeViewModel: HomeViewModel
     var menu: Menu? = null
@@ -63,6 +65,20 @@ class HomeFragment : DaggerFragment(), Findable {
     }
 
     override fun onOptionsItemSelected(item: MenuItem?): Boolean {
+//        item?.let {
+//            viewDisposables += item
+//                .clicks {
+//                item.itemId.let {
+//                    when (it) {
+//                        R.id.action_menu_home_favorite -> true
+//                        else -> false
+//                    }
+//                }
+//            }.debounce(10, TimeUnit.SECONDS).subscribe {
+//                homeViewModel.onFavoriteClick()
+//            }
+//        } ?: return super.onOptionsItemSelected(item)
+
         item?.itemId.let {
             when (it) {
                 R.id.action_menu_home_favorite -> homeViewModel.onFavoriteClick()

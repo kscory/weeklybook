@@ -6,6 +6,8 @@
     <!-- Home -->
     <string name="title_home">Home</string>
     <string name="title_home_toolbar">REC of this week</string>
+    <string name="failure_home_loading_rec">Fail to load book of recommendation</string>
+    <string name="failure_home_change_favorite">Fail to change favorite status</string>
 
     <!-- Recommendation -->
     <string name="title_recommendation">REC</string>

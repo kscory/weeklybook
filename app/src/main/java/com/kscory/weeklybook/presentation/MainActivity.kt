@@ -30,7 +30,7 @@ class MainActivity : BaseActivity() {
         navigationController.navigateToHome()
         setTitle(R.string.title_home_toolbar)
         setupBottomNavigation(savedInstanceState)
-
+        binding.toolbar.menu
     }
 
     private fun setupBottomNavigation(savedInstanceState: Bundle?) {

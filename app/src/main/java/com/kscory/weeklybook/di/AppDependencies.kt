@@ -10,6 +10,5 @@ interface AppDependencies {
     @Named("appContext")
     fun context(): Context
 
-    @Named("appResource")
     fun resourceProvider(): ResourceProvider
 }

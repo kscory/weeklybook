@@ -96,6 +96,7 @@ dependencies {
 
     // RxBinding
     implementation "com.jakewharton.rxbinding3:rxbinding:$rxBinding_version"
+    implementation "com.jakewharton.rxbinding3:rxbinding-core:$rxBinding_version"
     implementation "com.jakewharton.rxbinding3:rxbinding-appcompat:$rxBinding_version"
     implementation "com.jakewharton.rxbinding3:rxbinding-recyclerview:$rxBinding_version"
 

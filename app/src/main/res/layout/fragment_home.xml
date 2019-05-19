@@ -10,6 +10,9 @@
 
         <import alias="View"
                 type="android.view.View"/>
+
+        <import alias="R"
+                type="com.kscory.weeklybook.R"/>
     </data>
 
     <FrameLayout
@@ -18,6 +21,7 @@
         <ScrollView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:visibility="visible"
                 android:layout_marginBottom="@dimen/space_small">
 
             <androidx.constraintlayout.widget.ConstraintLayout
@@ -195,10 +199,11 @@
                 android:id="@+id/fl_loading"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:visibility="@{viewModel.isLoading ? View.VISIBLE : View.GONE}"
+                android:visibility="@{viewModel.isLoadingRec ? View.VISIBLE : viewModel.isLoadingFavorite ? View.VISIBLE : View.GONE}"
                 android:background="@color/translucent"
                 android:clickable="true"
-                android:elevation="10dp">
+                android:focusable="true"
+                android:elevation="12dp">
 
             <com.airbnb.lottie.LottieAnimationView
                     android:id="@+id/lottie_view_loading"
@@ -217,6 +222,43 @@
                     <!--style="?android:attr/progressBarStyle"/>-->
 
         </FrameLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/fl_fail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="@{viewModel.isFailingLoadRec ? View.VISIBLE : View.GONE}"
+                android:background="@color/colorWhite"
+                android:clickable="true"
+                android:focusable="true"
+                android:elevation="10dp">
+
+            <ImageView
+                    android:id="@+id/iv_fail"
+                    android:layout_width="@dimen/fail_loading_size"
+                    android:layout_height="@dimen/fail_loading_size"
+                    android:src="@drawable/ic_sms_failed_black_24dp"
+                    android:contentDescription="@string/failure_home_loading_rec"
+                    app:layout_constraintVertical_bias="0.4"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+            />
+
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/failure_home_loading_rec"
+                    android:textColor="@color/colorTitle"
+                    android:textSize="@dimen/home_title_font_size"
+                    app:layout_constraintVertical_bias="0"
+                    app:layout_constraintTop_toBottomOf="@+id/iv_fail"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
     </FrameLayout>
 </layout>

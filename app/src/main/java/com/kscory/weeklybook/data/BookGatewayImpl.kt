@@ -1,5 +1,6 @@
 package com.kscory.weeklybook.data
 
+import android.util.Log
 import com.kscory.weeklybook.domain.gateway.BookGateway
 import com.kscory.weeklybook.model.Recommendation
 import io.reactivex.Single
@@ -25,10 +26,18 @@ class BookGatewayImpl: BookGateway {
 
         return Single.just(rec)
             .delay(2000, TimeUnit.MILLISECONDS)
+//            .map {
+//                it.id / 0
+//                it
+//            }
     }
 
     override fun changeFavorite(id: Int, isFavorite: Boolean): Single<Boolean> {
         return Single.just(!isFavorite)
             .delay(2000, TimeUnit.MILLISECONDS)
+//            .map {
+//                10 / 0
+//                it
+//            }
     }
 }
