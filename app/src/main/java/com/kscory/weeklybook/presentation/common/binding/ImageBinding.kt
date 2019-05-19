@@ -4,6 +4,7 @@ import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.widget.ImageView
 import androidx.databinding.BindingAdapter
+import com.airbnb.lottie.LottieAnimationView
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.kscory.weeklybook.utils.CustomGlideApp
 

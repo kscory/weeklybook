@@ -3,6 +3,7 @@ package com.kscory.weeklybook.data
 import com.kscory.weeklybook.domain.gateway.BookGateway
 import com.kscory.weeklybook.model.Recommendation
 import io.reactivex.Single
+import java.util.concurrent.TimeUnit
 
 class BookGatewayImpl: BookGateway {
 
@@ -23,9 +24,11 @@ class BookGatewayImpl: BookGateway {
             false)
 
         return Single.just(rec)
+            .delay(2000, TimeUnit.MILLISECONDS)
     }
 
     override fun changeFavorite(id: Int, isFavorite: Boolean): Single<Boolean> {
         return Single.just(!isFavorite)
+            .delay(2000, TimeUnit.MILLISECONDS)
     }
 }

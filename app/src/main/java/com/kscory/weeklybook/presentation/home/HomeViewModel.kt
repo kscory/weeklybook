@@ -40,7 +40,7 @@ class HomeViewModel @Inject constructor(
 //                        recommendation.set(it.data)
                     }
                     is UIResult.Failure -> {
-                        // Todo Loading 실패시 메시지 작
+                        // Todo Loading 실패시 메시지 작성
                     }
                 }
             }
