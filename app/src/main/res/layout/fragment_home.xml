@@ -2,11 +2,11 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
-        tools:context=".presentation.home.HomeFragment">
+        tools:context=".presentation.main.home.HomeFragment">
     <data>
         <variable
                 name="viewModel"
-                type="com.kscory.weeklybook.presentation.home.HomeViewModel"/>
+                type="com.kscory.weeklybook.presentation.main.home.HomeViewModel"/>
 
         <import alias="View"
                 type="android.view.View"/>

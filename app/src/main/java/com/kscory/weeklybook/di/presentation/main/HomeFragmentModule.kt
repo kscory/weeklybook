@@ -2,10 +2,10 @@ package com.kscory.weeklybook.di.presentation.main
 
 import androidx.lifecycle.ViewModel
 import com.kscory.weeklybook.di.presentation.viewmodel.ViewModelKey
-import com.kscory.weeklybook.presentation.home.HomeFragment
-import com.kscory.weeklybook.presentation.home.HomeViewModel
-import com.kscory.weeklybook.presentation.home.viewusecase.ChangeFavoriteViewUseCase
-import com.kscory.weeklybook.presentation.home.viewusecase.ChangeFavoriteViewViewUseCaseImpl
+import com.kscory.weeklybook.presentation.main.home.HomeFragment
+import com.kscory.weeklybook.presentation.main.home.HomeViewModel
+import com.kscory.weeklybook.presentation.main.home.viewusecase.ChangeFavoriteViewUseCase
+import com.kscory.weeklybook.presentation.main.home.viewusecase.ChangeFavoriteViewViewUseCaseImpl
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
@@ -23,5 +23,6 @@ class HomeFragmentModule {
     }
 
     @Provides
-    fun providesChangeFavoriteUseCase(fragment: HomeFragment): ChangeFavoriteViewUseCase = ChangeFavoriteViewViewUseCaseImpl(fragment)
+    fun providesChangeFavoriteUseCase(fragment: HomeFragment): ChangeFavoriteViewUseCase =
+        ChangeFavoriteViewViewUseCaseImpl(fragment)
 }

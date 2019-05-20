@@ -1,4 +1,4 @@
-package com.kscory.weeklybook.presentation.home
+package com.kscory.weeklybook.presentation.main.home
 
 import android.util.Log
 import androidx.lifecycle.LifecycleObserver
@@ -13,7 +13,7 @@ import com.kscory.weeklybook.presentation.common.resource.ResourceProvider
 import com.kscory.weeklybook.presentation.common.resource.ToastProvider
 import com.kscory.weeklybook.presentation.common.rx.SchedulerProvider
 import com.kscory.weeklybook.presentation.common.viewmodel.BaseRxAACViewModel
-import com.kscory.weeklybook.presentation.home.viewusecase.ChangeFavoriteViewUseCase
+import com.kscory.weeklybook.presentation.main.home.viewusecase.ChangeFavoriteViewUseCase
 import javax.inject.Inject
 
 class HomeViewModel @Inject constructor(

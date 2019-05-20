@@ -1,11 +1,10 @@
-package com.kscory.weeklybook.presentation
+package com.kscory.weeklybook.presentation.main
 
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import androidx.databinding.DataBindingUtil
 import com.kscory.weeklybook.R
 import com.kscory.weeklybook.databinding.ActivityMainBinding
+import com.kscory.weeklybook.presentation.NavigationController
 import com.kscory.weeklybook.presentation.common.activity.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject

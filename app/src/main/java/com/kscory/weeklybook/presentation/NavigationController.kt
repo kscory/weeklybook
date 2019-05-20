@@ -5,8 +5,8 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import com.kscory.weeklybook.R
 import com.kscory.weeklybook.presentation.common.fragment.Findable
-import com.kscory.weeklybook.presentation.favorite.FavoriteFragment
-import com.kscory.weeklybook.presentation.home.HomeFragment
+import com.kscory.weeklybook.presentation.main.favorite.FavoriteFragment
+import com.kscory.weeklybook.presentation.main.home.HomeFragment
 import javax.inject.Inject
 
 class NavigationController @Inject constructor(activity: AppCompatActivity) {

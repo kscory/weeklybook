@@ -1,14 +1,15 @@
-package com.kscory.weeklybook.presentation.home.viewusecase
+package com.kscory.weeklybook.presentation.main.home.viewusecase
 
 import com.kscory.weeklybook.R
-import com.kscory.weeklybook.presentation.home.HomeFragment
+import com.kscory.weeklybook.presentation.main.home.HomeFragment
 
 interface ChangeFavoriteViewUseCase {
 
     fun changeFavorite(isFavorite: Boolean)
 }
 
-class ChangeFavoriteViewViewUseCaseImpl(private val fragment: HomeFragment) : ChangeFavoriteViewUseCase {
+class ChangeFavoriteViewViewUseCaseImpl(private val fragment: HomeFragment) :
+    ChangeFavoriteViewUseCase {
 
     override fun changeFavorite(isFavorite: Boolean) {
         val menu = fragment.menu ?: return

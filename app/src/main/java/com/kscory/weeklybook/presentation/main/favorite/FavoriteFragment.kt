@@ -1,4 +1,4 @@
-package com.kscory.weeklybook.presentation.favorite
+package com.kscory.weeklybook.presentation.main.favorite
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -10,7 +10,8 @@ import com.kscory.weeklybook.R
 class FavoriteFragment: Fragment() {
 
     companion object {
-        fun newInstance(): FavoriteFragment = FavoriteFragment()
+        fun newInstance(): FavoriteFragment =
+            FavoriteFragment()
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {

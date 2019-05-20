@@ -1,10 +1,9 @@
-package com.kscory.weeklybook.presentation.home
+package com.kscory.weeklybook.presentation.main.home
 
 import android.os.Bundle
 import android.view.*
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
-import androidx.recyclerview.widget.RecyclerView
 import com.kscory.weeklybook.R
 import com.kscory.weeklybook.databinding.FragmentHomeBinding
 import com.kscory.weeklybook.presentation.common.fragment.Findable
@@ -27,7 +26,8 @@ class HomeFragment : DaggerFragment(), Findable {
 
     companion object {
         @JvmStatic
-        fun newInstance(): HomeFragment = HomeFragment()
+        fun newInstance(): HomeFragment =
+            HomeFragment()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -50,8 +50,7 @@ class HomeFragment : DaggerFragment(), Findable {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//        lifecycle.addObserver(homeViewModel)
-
+        lifecycle.addObserver(homeViewModel)
         super.onViewCreated(view, savedInstanceState)
     }
 

@@ -3,11 +3,9 @@ package com.kscory.weeklybook.di.presentation.main
 import android.content.Context
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
-import com.kscory.weeklybook.presentation.MainActivity
-import com.kscory.weeklybook.presentation.common.resource.ToastProvider
-import com.kscory.weeklybook.presentation.common.resource.ToastProviderImpl
-import com.kscory.weeklybook.presentation.favorite.FavoriteFragment
-import com.kscory.weeklybook.presentation.home.HomeFragment
+import com.kscory.weeklybook.presentation.main.MainActivity
+import com.kscory.weeklybook.presentation.main.favorite.FavoriteFragment
+import com.kscory.weeklybook.presentation.main.home.HomeFragment
 import dagger.Binds
 import dagger.Module
 import dagger.Provides
