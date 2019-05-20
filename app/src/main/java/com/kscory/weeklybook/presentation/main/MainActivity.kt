@@ -9,7 +9,7 @@ import com.kscory.weeklybook.presentation.common.activity.BaseActivity
 import kotlinx.android.synthetic.main.activity_main.*
 import javax.inject.Inject
 
-class MainActivity : BaseActivity() {
+class MainActivity : BaseActivity(), StartFromMainActivity {
 
     @Inject
     lateinit var navigationController: NavigationController
@@ -51,5 +51,8 @@ class MainActivity : BaseActivity() {
         }
     }
 
+    override fun startToSignin() {
+        navigationController.navigateToSignInActivity()
+    }
 
 }

@@ -2,6 +2,7 @@ package com.kscory.weeklybook.data
 
 import android.util.Log
 import com.kscory.weeklybook.domain.gateway.BookGateway
+import com.kscory.weeklybook.exception.MissingSigninException
 import com.kscory.weeklybook.model.Recommendation
 import io.reactivex.Single
 import java.util.concurrent.TimeUnit
@@ -39,5 +40,11 @@ class BookGatewayImpl: BookGateway {
 //                10 / 0
 //                it
 //            }
+            .map {
+                if (it) {
+                    throw MissingSigninException()
+                }
+                it
+            }
     }
 }

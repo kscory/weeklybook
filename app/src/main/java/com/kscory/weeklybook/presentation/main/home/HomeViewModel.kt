@@ -6,6 +6,7 @@ import androidx.lifecycle.MutableLiveData
 import com.kscory.weeklybook.R
 import com.kscory.weeklybook.domain.interactor.ChangeFavoriteUseCase
 import com.kscory.weeklybook.domain.interactor.GetBookRecUseCase
+import com.kscory.weeklybook.exception.MissingSigninException
 import com.kscory.weeklybook.model.Recommendation
 import com.kscory.weeklybook.presentation.UIResult
 import com.kscory.weeklybook.presentation.common.mapper.toResult
@@ -13,6 +14,7 @@ import com.kscory.weeklybook.presentation.common.resource.ResourceProvider
 import com.kscory.weeklybook.presentation.common.resource.ToastProvider
 import com.kscory.weeklybook.presentation.common.rx.SchedulerProvider
 import com.kscory.weeklybook.presentation.common.viewmodel.BaseRxAACViewModel
+import com.kscory.weeklybook.presentation.main.StartFromMainActivity
 import com.kscory.weeklybook.presentation.main.home.viewusecase.ChangeFavoriteViewUseCase
 import javax.inject.Inject
 
@@ -20,6 +22,7 @@ class HomeViewModel @Inject constructor(
     private val getBookRecommendedUseCase: GetBookRecUseCase,
     private val changeFavoriteUseCase: ChangeFavoriteUseCase,
     private val changeFavoriteViewUseCase: ChangeFavoriteViewUseCase,
+    private val startFromMainActivity: StartFromMainActivity,
     private val schedulerProvider: SchedulerProvider,
     private val toastProvider: ToastProvider,
     private val resourceProvider: ResourceProvider
@@ -61,7 +64,7 @@ class HomeViewModel @Inject constructor(
             recommendation.value?.let { rec: Recommendation ->
                 changeFavoriteUseCase.execute(Pair(rec.id, isFavorite.value!!))
                     .toResult(schedulerProvider)
-                    .subscribe {
+                    .subscribe({
                         isLoadingFavorite.value = it.inProgress
 
                         when (it) {
@@ -70,11 +73,17 @@ class HomeViewModel @Inject constructor(
                                 changeFavoriteViewUseCase.changeFavorite(it.data)
                             }
                             is UIResult.Failure -> {
-                                Log.e("fail", resourceProvider.string(R.string.failure_home_change_favorite))
-                                toastProvider.makeToast(resourceProvider.string(R.string.failure_home_change_favorite))
+                                if (it.e is MissingSigninException) {
+                                    Log.e("error", it.errorMsg)
+                                    startFromMainActivity.startToSignin()
+                                } else {
+                                    toastProvider.makeToast(resourceProvider.string(R.string.failure_home_change_favorite))
+                                }
                             }
                         }
-                    }
+                    }, {
+
+                    })
                     .bindUtilDestroy()
             }
         }

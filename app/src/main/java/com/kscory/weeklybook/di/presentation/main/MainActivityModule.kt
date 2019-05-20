@@ -4,6 +4,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import com.kscory.weeklybook.presentation.main.MainActivity
+import com.kscory.weeklybook.presentation.main.StartFromMainActivity
 import com.kscory.weeklybook.presentation.main.favorite.FavoriteFragment
 import com.kscory.weeklybook.presentation.main.home.HomeFragment
 import dagger.Binds
@@ -36,4 +37,7 @@ class MainActivityModule {
 
     @Provides
     fun provideInflater(@Named("mainContext") context: Context) : LayoutInflater = LayoutInflater.from(context)
+
+    @Provides
+    fun providesStartToActivity(activity: MainActivity): StartFromMainActivity = activity
 }
